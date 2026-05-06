@@ -18,7 +18,7 @@ This repository contains the code and data referenced in Appendix S5 (Code, Data
 │   ├── dpm_lora_val14.csv             # Matched DPM-Solver++ LoRA, val14 (n=1118)
 │   ├── ddim_lora_val14.csv            # Mismatched DDIM LoRA, val14 (n=1118)
 │   ├── v4a_seed{42,43,44}_val14.csv   # V4-A' multi-seed (n=1118 each)
-│   ├── dppo_val14.csv                 # DPPO matched-compute baseline (M11)
+│   ├── dppo_val14.csv                 # DPPO matched-compute baseline (Table 5)
 │   ├── tost_results.json              # TOST equivalence test outputs
 │   ├── lemma1_K_geq_2.json            # Multi-constraint Lemma 1 frontier data
 │   ├── sanity_solver_divergence_multidim.json   # Dim-robustness scaling
@@ -40,7 +40,7 @@ This repository contains the code and data referenced in Appendix S5 (Code, Data
 | §4.5 9.7×±4.0 gradient cosine ratio | `data/b1_grad_cosine_s90{2,4,5}.json` |
 | Appendix S3 Lemma 1 K≥2 frontier | `lemma1_toy/lemma1_toy_K_geq_2.py` reproduces `data/lemma1_K_geq_2.json` |
 | §4.7 KS=0.016 matched open-loop | `data/o_matched_open_loop.json` |
-| Reviewer M11 DPPO 0.8960 | `data/dppo_val14.csv` |
+| Table 5 DPPO matched-compute 0.8960 / Cat 63 / Perfect 547 | `data/dppo_val14.csv` |
 
 ## Dependencies
 

@@ -1,17 +1,17 @@
 """
 Lemma 1 toy demonstration with K>=2 active constraints.
 
-Reviewer M8 noted that the original toy uses d=1, K=1 (so log K = 0 makes
-part 3 vacuous). This script tests Lemma 1 part 3 (forward-vs-gradient-reach
-trade-off feasibility) with K in {2, 4, 8} active constraints.
+The original 1-D toy uses d=1, K=1 (so log K = 0 makes Lemma 1 part 3 vacuous).
+This script tests Lemma 1 part 3 (forward-vs-gradient-reach trade-off
+feasibility) with K in {2, 4, 8} active constraints.
 
 For each (K, beta) point we sweep:
   - Sample K signed margins d_i drawn near a target distance d_star = 0.40m
     (some above and some below the boundary, mimicking real PCDR active set)
   - Compute the *softmax-weighted-average* surrogate
         \\tilde R = sum_i w_i d_i, w_i = e^{-d_i/beta} / Z
-  - Compute true gradient norm at d_star (using the correct product-rule formula
-    that includes the (1 + (\\tilde R - d_i)/beta) factor reviewer M8 flagged)
+  - Compute true gradient norm at d_star using the product-rule formula
+    that includes the (1 + (\\tilde R - d_i)/beta) factor
   - Compute forward error |\\tilde R - min_i d_i|
   - Plot empirical (epsilon, eta) achievable region vs predicted Pareto frontier
         d_star * log K <= epsilon * log(1/eta)
@@ -52,7 +52,8 @@ def evaluate(d, beta):
     w = softmax(d, beta)
     R = (w * d).sum()
     fwd_err = R - d.min()  # should be <= beta * log K (Lemma 1 part 1)
-    # CORRECT gradient including the (1 + (R - d_i)/beta) factor (M8 fix)
+    # Exact gradient including the (1 + (R - d_i)/beta) factor (vs. the
+    # log-sum-exp envelope bound used in Lemma 1 part 2 below)
     grad_i = w * (1 + (R - d) / beta)  # gradient at component i
     grad_at_dstar = abs(grad_i[0])  # we want reach to d[0] = d_star
     # Bound from Lemma 1 part 2 (incorrect / conservative form)
