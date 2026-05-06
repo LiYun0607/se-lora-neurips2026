@@ -2,7 +2,7 @@
 
 This repository contains the code and data referenced in Appendix S5 (Code, Data, and Reproducibility) of the NeurIPS 2026 submission *"When Does Reward Fine-Tuning of Diffusion Motion Planners Move the Deployment Metric? A Mechanistic Study with Cross-Stack Evidence"*.
 
-**Submission ID** (placeholder, to be filled at acceptance time): `NeurIPS-2026-XXXX`.
+**OpenReview Submission Number**: `26402`.
 
 ## Layout
 
