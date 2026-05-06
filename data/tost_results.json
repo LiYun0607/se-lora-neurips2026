@@ -1,0 +1,19 @@
+{
+  "n_matched": 1133,
+  "dpm_mean": 0.8849820760135941,
+  "ddim_mean": 0.8837017020215958,
+  "delta": 0.001280373991998295,
+  "sd_diff": 0.07193177138537547,
+  "se_diff": 0.0021370062897176877,
+  "t_paired": 0.5991437639462637,
+  "p_paired": 0.5491969035688611,
+  "wilcoxon_W": 73515.0,
+  "wilcoxon_p": 5.404151389331096e-05,
+  "contingency_A": 1054,
+  "contingency_B": 3,
+  "contingency_C": 3,
+  "contingency_D": 73,
+  "catastrophic_overlap_pct": 96.05263157894737,
+  "mcnemar_chi2": 0.0,
+  "mcnemar_p": 1.0
+}

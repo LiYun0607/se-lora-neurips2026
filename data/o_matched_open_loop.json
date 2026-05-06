@@ -1,0 +1,23 @@
+{
+  "bc_open_loop_pred_on_selora_bag": {
+    "n": 6194,
+    "mean": 3.1350668875183603,
+    "std": 2.2507062636497643
+  },
+  "selora_open_loop_pred_on_selora_bag": {
+    "n": 6218,
+    "mean": 3.149710867955356,
+    "std": 2.257481098157911
+  },
+  "matched_open_loop_KS": 0.015739248173119724,
+  "bc_open_loop_pred_on_bc_bag": {
+    "n": 5502,
+    "mean": 3.6616249577724926
+  },
+  "selora_open_loop_pred_on_bc_bag": {
+    "n": 11052,
+    "mean": 3.670018058080109
+  },
+  "paper_mismatched_KS": 0.28,
+  "note": "matched open-loop = both models on same bag, both running open-loop inference. Isolates model effect from loop-closure mode."
+}

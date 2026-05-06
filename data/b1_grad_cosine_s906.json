@@ -1,0 +1,31 @@
+{
+  "checkpoint": "./checkpoints/se_lora/seed906.pth",
+  "reward": "uniform compute_cls_reward (nocomfort, no per-city weights)",
+  "n_samples_per_city": 30,
+  "cities": [
+    "boston",
+    "singapore",
+    "vegas",
+    "pittsburgh"
+  ],
+  "shared_cosine": {
+    "boston_vs_singapore": -0.612334132194519,
+    "boston_vs_vegas": 0.4507395029067993,
+    "boston_vs_pittsburgh": -0.08843882381916046,
+    "singapore_vs_vegas": -0.5644949674606323,
+    "singapore_vs_pittsburgh": 0.24569186568260193,
+    "vegas_vs_pittsburgh": -0.2034563273191452
+  },
+  "expert_cosine": {
+    "boston_vs_singapore": -0.011904027312994003,
+    "boston_vs_vegas": 0.00458393432199955,
+    "boston_vs_pittsburgh": -0.017080742865800858,
+    "singapore_vs_vegas": 0.017540546134114265,
+    "singapore_vs_pittsburgh": -0.03648856282234192,
+    "vegas_vs_pittsburgh": -0.026656299829483032
+  },
+  "shared_mean": -0.12871548036734262,
+  "expert_mean": -0.011667525395751,
+  "paper_autoware_shared_mean": 0.311,
+  "paper_autoware_expert_mean": 0.032
+}
