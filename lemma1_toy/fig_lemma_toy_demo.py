@@ -2,7 +2,7 @@
 
 Three panels: reward landscape, gradient magnitude (log), and gradient
 ascent from theta_0=0.7. Compares bit-exact 0/1 indicator, two log-sum-exp
-soft-min surrogates (beta=0.05 / 0.12), and V4-A' (proxy + bit-exact margin
+soft-min surrogates (beta=0.05 / 0.12), and PCDR-CR (proxy + bit-exact margin
 auxiliary). NeurIPS-style: shared style helper, no hardcoded fontsizes.
 """
 import sys, pathlib
@@ -101,7 +101,7 @@ LBL = {
     "indicator": r"bit-exact $\mathbf{1}[d{>}0]$",
     "soft005":   r"soft, $\beta{=}0.05$",
     "soft012":   r"soft, $\beta{=}0.12$",
-    "v4a":       r"V4-A$'$",
+    "v4a":       r"PCDR-CR",
 }
 
 

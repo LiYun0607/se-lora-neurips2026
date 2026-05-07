@@ -9,7 +9,7 @@ This repository contains the code and data referenced in Appendix S6 (Code, Data
 ```
 .
 ├── pcdr/                 # Bit-exact PCDR audit code (NC, DAC, DDC, EP, TTC primitives)
-├── diffusion_solver/     # Differentiable DPM-Solver++ unrolling + V4-A' margin reward
+├── diffusion_solver/     # Differentiable DPM-Solver++ unrolling + PCDR-CR margin reward
 ├── selora/               # SE-LoRA training pipeline + 4×4 causal activation patching
 ├── lemma1_toy/           # 1-D and K≥2 toy of Lemma 1 (no-go frontier)
 ├── tost/                 # TOST equivalence test pre-specified analysis script
@@ -17,7 +17,7 @@ This repository contains the code and data referenced in Appendix S6 (Code, Data
 │   ├── bc_baseline_val14.csv          # BC pretrained, val14 nonreactive (n=1118)
 │   ├── dpm_lora_val14.csv             # Matched DPM-Solver++ LoRA, val14 (n=1118)
 │   ├── ddim_lora_val14.csv            # Mismatched DDIM LoRA, val14 (n=1118)
-│   ├── v4a_seed{42,43,44}_val14.csv   # V4-A' multi-seed (n=1118 each)
+│   ├── v4a_seed{42,43,44}_val14.csv   # PCDR-CR multi-seed (n=1118 each)
 │   ├── dppo_val14.csv                 # DPPO matched-compute baseline (Table 5)
 │   ├── tost_results.json              # TOST equivalence test outputs
 │   ├── lemma1_K_geq_2.json            # Multi-constraint Lemma 1 frontier data
@@ -35,7 +35,7 @@ This repository contains the code and data referenced in Appendix S6 (Code, Data
 |---|---|
 | Table 5 BC 0.8973 / Cat 61 / Perfect 548 | `data/bc_baseline_val14.csv`, threshold `score≥0.99` for Perfect |
 | Table 5 DPM++ LoRA 0.8849 / DDIM 0.8836 | `data/dpm_lora_val14.csv`, `data/ddim_lora_val14.csv` |
-| Table 5 V4-A' (3-seed) 0.8964±0.0013 | `data/v4a_seed{42,43,44}_val14.csv`, mean across files |
+| Table 5 PCDR-CR (3-seed) 0.8964±0.0013 | `data/v4a_seed{42,43,44}_val14.csv`, mean across files |
 | Table tab:tost TOST p=0.041 | `tost/run_tost_dpm_ddim.py` on `dpm_lora_val14.csv` + `ddim_lora_val14.csv` |
 | §4.5 9.7×±4.0 gradient cosine ratio | `data/b1_grad_cosine_s90{2,4,5}.json` |
 | Appendix S3 Lemma 1 K≥2 frontier | `lemma1_toy/lemma1_toy_K_geq_2.py` reproduces `data/lemma1_K_geq_2.json` |
@@ -62,11 +62,11 @@ The `nuplan-devkit` is required to re-run the val14 closed-loop simulation but i
 - `driving_direction_compliance(ego, route_lanes)` — same precision
 - `ego_progress(ego, route)` and `time_to_collision(ego, neighbors)` — at machine precision
 
-Use `nuplan_reward_cls_pcdr.py` to compose them into the soft-CLS-structured reward used in V4-A'.
+Use `nuplan_reward_cls_pcdr.py` to compose them into the soft-CLS-structured reward used in PCDR-CR.
 
-### Differentiable DPM-Solver++ + V4-A' (`diffusion_solver/`)
+### Differentiable DPM-Solver++ + PCDR-CR (`diffusion_solver/`)
 
-`differentiable_rollout.py` implements the kinematic-bicycle rollout with autograd. `train_selora_vdgrpo_pcdr5ops.py` is the V4-A' training script (noc soft-CLS proxy + PCDR margin auxiliary). `run_pcdr_margin_training.py` is the launcher script (3 seeds × 3 epochs).
+`differentiable_rollout.py` implements the kinematic-bicycle rollout with autograd. `train_selora_vdgrpo_pcdr5ops.py` is the PCDR-CR training script (noc soft-CLS proxy + PCDR margin auxiliary). `run_pcdr_margin_training.py` is the launcher script (3 seeds × 3 epochs).
 
 ### SE-LoRA + activation patching (`selora/`)
 
