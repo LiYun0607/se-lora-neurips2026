@@ -1,6 +1,6 @@
 # SE-LoRA: Reproducibility Release
 
-This repository contains the code and data referenced in Appendix S5 (Code, Data, and Reproducibility) of the NeurIPS 2026 submission *"When Does Reward Fine-Tuning of Diffusion Motion Planners Move the Deployment Metric? A Mechanistic Study with Cross-Stack Evidence"*.
+This repository contains the code and data referenced in Appendix S6 (Code, Data, and Reproducibility) of the NeurIPS 2026 submission *"Reward Fine-Tuning Diffusion Planners Reveals an Intervention-Supported Shared/Expert LoRA Decomposition"*.
 
 **OpenReview Submission Number**: `26402`.
 
