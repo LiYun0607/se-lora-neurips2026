@@ -1,0 +1,195 @@
+{
+  "timestamp": "2026-05-07T11:08:04.474412Z",
+  "configs": {
+    "A_rs0_re12": {
+      "rs": 0,
+      "re": 12,
+      "ratio": "0:12",
+      "epochs_completed": 7,
+      "last_epoch_overall": 352.47,
+      "last_epoch_per_map": {
+        "map_A_hongo": 174.9,
+        "map_B_kashiwa": 550.95,
+        "map_C_shalun": 83.88,
+        "map_D_unagoya": 451.99
+      },
+      "epoch_curve": [
+        {
+          "epoch": 1,
+          "agg": 81.33,
+          "map_A": -4.8,
+          "map_B": 174.49,
+          "map_C": 40.82,
+          "map_D": 123.18
+        },
+        {
+          "epoch": 2,
+          "agg": 242.28,
+          "map_A": 83.56,
+          "map_B": 446.4,
+          "map_C": 42.23,
+          "map_D": 293.37
+        },
+        {
+          "epoch": 3,
+          "agg": 313.54,
+          "map_A": 128.3,
+          "map_B": 524.55,
+          "map_C": 50.9,
+          "map_D": 410.41
+        },
+        {
+          "epoch": 4,
+          "agg": 332.97,
+          "map_A": 146.62,
+          "map_B": 543.0,
+          "map_C": 49.02,
+          "map_D": 435.5
+        },
+        {
+          "epoch": 5,
+          "agg": 342.6,
+          "map_A": 159.17,
+          "map_B": 547.43,
+          "map_C": 65.77,
+          "map_D": 445.62
+        },
+        {
+          "epoch": 6,
+          "agg": 348.11,
+          "map_A": 167.7,
+          "map_B": 549.43,
+          "map_C": 75.65,
+          "map_D": 449.63
+        },
+        {
+          "epoch": 7,
+          "agg": 352.47,
+          "map_A": 174.9,
+          "map_B": 550.95,
+          "map_C": 83.88,
+          "map_D": 451.99
+        }
+      ],
+      "status": "ok",
+      "log": "/root/autoware_ws/grpo_data/rank_sweep_20260507/A_rs0_re12/train.log"
+    },
+    "C_rs4_re8": {
+      "rs": 4,
+      "re": 8,
+      "ratio": "1:2",
+      "epochs_completed": 7,
+      "last_epoch_overall": 367.76,
+      "last_epoch_per_map": {
+        "map_A_hongo": 180.37,
+        "map_B_kashiwa": 559.12,
+        "map_C_shalun": 381.45,
+        "map_D_unagoya": 461.18
+      },
+      "epoch_curve": [
+        {
+          "epoch": 1,
+          "agg": 149.95,
+          "map_A": 39.36,
+          "map_B": 281.43,
+          "map_C": 40.82,
+          "map_D": 195.47
+        },
+        {
+          "epoch": 2,
+          "agg": 322.71,
+          "map_A": 129.11,
+          "map_B": 528.26,
+          "map_C": 201.39,
+          "map_D": 425.02
+        },
+        {
+          "epoch": 3,
+          "agg": 346.02,
+          "map_A": 149.36,
+          "map_B": 548.22,
+          "map_C": 317.03,
+          "map_D": 447.35
+        },
+        {
+          "epoch": 4,
+          "agg": 354.56,
+          "map_A": 160.49,
+          "map_B": 553.09,
+          "map_C": 348.97,
+          "map_D": 453.15
+        },
+        {
+          "epoch": 5,
+          "agg": 359.85,
+          "map_A": 167.96,
+          "map_B": 555.57,
+          "map_C": 367.42,
+          "map_D": 456.55
+        },
+        {
+          "epoch": 6,
+          "agg": 364.26,
+          "map_A": 174.63,
+          "map_B": 557.61,
+          "map_C": 379.13,
+          "map_D": 459.09
+        },
+        {
+          "epoch": 7,
+          "agg": 367.76,
+          "map_A": 180.37,
+          "map_B": 559.12,
+          "map_C": 381.45,
+          "map_D": 461.18
+        }
+      ],
+      "status": "ok",
+      "log": "/root/autoware_ws/grpo_data/rank_sweep_20260507/C_rs4_re8/train.log"
+    },
+    "F_rs12_re0": {
+      "rs": 12,
+      "re": 0,
+      "ratio": "12:0",
+      "epochs_completed": 3,
+      "last_epoch_overall": 330.32,
+      "last_epoch_per_map": {
+        "map_A_hongo": 124.46,
+        "map_B_kashiwa": 535.14,
+        "map_C_shalun": 344.57,
+        "map_D_unagoya": 439.79
+      },
+      "epoch_curve": [
+        {
+          "epoch": 1,
+          "agg": 92.74,
+          "map_A": 9.33,
+          "map_B": 184.9,
+          "map_C": 38.66,
+          "map_D": 132.54
+        },
+        {
+          "epoch": 2,
+          "agg": 280.67,
+          "map_A": 97.86,
+          "map_B": 466.68,
+          "map_C": 204.81,
+          "map_D": 382.89
+        },
+        {
+          "epoch": 3,
+          "agg": 330.32,
+          "map_A": 124.46,
+          "map_B": 535.14,
+          "map_C": 344.57,
+          "map_D": 439.79
+        }
+      ],
+      "status": "partial",
+      "log": "/root/autoware_ws/grpo_data/rank_sweep_20260507/F_rs12_re0/train.log"
+    }
+  },
+  "paper_baseline_v2_ep10_overall": 383.41,
+  "paper_baseline_v1_ep1_overall": 152.66,
+  "protocol": "7 epochs, lr=2e-6, full data 6377 npz, 4 ODD (Map A/B/C/D), seed=s42"
+}

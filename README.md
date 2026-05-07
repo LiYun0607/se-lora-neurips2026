@@ -24,6 +24,7 @@ This repository contains the code and data referenced in Appendix S6 (Code, Data
 │   ├── sanity_solver_divergence_multidim.json   # Dim-robustness scaling
 │   ├── b1_grad_cosine_s90{2,4,5,6}.json         # 4-seed gradient cosine ablation
 │   ├── o_matched_open_loop.json                 # Sim-to-real KS=0.016 matched comparison
+│   ├── autoware_rank_sweep.json                 # Autoware rank-allocation sweep (Appendix S23)
 │   └── autoware_obstacle/             # Per-route CSVs from Autoware 4-ODD evaluation
 ├── requirements.txt
 └── LICENSE               # Apache 2.0
@@ -41,6 +42,7 @@ This repository contains the code and data referenced in Appendix S6 (Code, Data
 | Appendix S3 Lemma 1 K≥2 frontier | `lemma1_toy/lemma1_toy_K_geq_2.py` reproduces `data/lemma1_K_geq_2.json` |
 | §4.7 KS=0.016 matched open-loop | `data/o_matched_open_loop.json` |
 | Table 5 DPPO matched-compute 0.8960 / Cat 63 / Perfect 547 | `data/dppo_val14.csv` |
+| Appendix S23 Autoware sweep (1:2 = peak: 367.76 vs 352.47/330.32) | `data/autoware_rank_sweep.json` |
 
 ## Dependencies
 
